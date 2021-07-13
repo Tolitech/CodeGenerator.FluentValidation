@@ -1,11 +1,12 @@
 ﻿using System;
 using System.Linq;
 using System.Text.RegularExpressions;
+using FluentValidation;
 using FluentValidation.Validators;
 
 namespace Tolitech.CodeGenerator.FluentValidation.Validators
 {
-    public abstract class CpfCnpjBaseValidator : PropertyValidator
+    public abstract class CpfCnpjBaseValidator<T, TProperty> : PropertyValidator<T, TProperty>
     {
         private const int cpfLength = 11;
         private const int cnpjLength = 14;
@@ -19,15 +20,15 @@ namespace Tolitech.CodeGenerator.FluentValidation.Validators
         protected int[] CnpjFirstMultiplierCollection => new int[12] { 5, 4, 3, 2, 9, 8, 7, 6, 5, 4, 3, 2 };
         protected int[] CnpjSecondMultiplierCollection => new int[13] { 6, 5, 4, 3, 2, 9, 8, 7, 6, 5, 4, 3, 2 };
 
-        protected CpfCnpjBaseValidator(bool isCpf, bool isCnpj, string errorMessage) : base(errorMessage)
+        protected CpfCnpjBaseValidator(bool isCpf, bool isCnpj) : base()
         {
             this.isCpf = isCpf;
             this.isCnpj = isCnpj;
         }
 
-        protected override bool IsValid(PropertyValidatorContext context)
+        public override bool IsValid(ValidationContext<T> context, TProperty property)
         {
-            var value = context.PropertyValue as string ?? string.Empty;
+            var value = property as string ?? string.Empty;
             value = Regex.Replace(value, "[^0-9]", "");
 
             if (string.IsNullOrEmpty(value))

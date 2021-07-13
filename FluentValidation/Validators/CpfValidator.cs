@@ -2,10 +2,12 @@
 
 namespace Tolitech.CodeGenerator.FluentValidation.Validators
 {
-    public class CpfValidator : CpfCnpjBaseValidator
+    public class CpfValidator<T, TProperty> : CpfCnpjBaseValidator<T, TProperty>
     {
-        internal CpfValidator(string errorMessage) : base(isCpf: true, isCnpj: false, errorMessage) { }
+        public override string Name => "CpfValidator";
 
-        public CpfValidator() : this(Resources.CpfCnpj.CpfCnpjResource.Cpf_Invalid) { }
+        protected override string GetDefaultMessageTemplate(string errorCode) => Resources.CpfCnpj.CpfCnpjResource.Cpf_Invalid;
+
+        public CpfValidator() : base(isCpf: true, isCnpj: false) { }
     }
 }

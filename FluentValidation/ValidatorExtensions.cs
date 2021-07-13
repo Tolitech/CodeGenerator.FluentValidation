@@ -13,7 +13,7 @@ namespace Tolitech.CodeGenerator.FluentValidation
         /// <returns>a rule builder with cnpj validation included</returns>
         public static IRuleBuilderOptions<T, string> IsValidCNPJ<T>(this IRuleBuilder<T, string> ruleBuilder)
         {
-            return ruleBuilder.SetValidator(new CnpjValidator());
+            return ruleBuilder.SetValidator(new CnpjValidator<T, string>());
         }
 
         /// <summary>
@@ -24,7 +24,7 @@ namespace Tolitech.CodeGenerator.FluentValidation
         /// <returns>a rule builder with cpf validation included</returns>
         public static IRuleBuilderOptions<T, string> IsValidCPF<T>(this IRuleBuilder<T, string> ruleBuilder)
         {
-            return ruleBuilder.SetValidator(new CpfValidator());
+            return ruleBuilder.SetValidator(new CpfValidator<T, string>());
         }
 
         /// <summary>
@@ -35,7 +35,7 @@ namespace Tolitech.CodeGenerator.FluentValidation
         /// <returns>a rule builder with cnpj or cpf validation included</returns>
         public static IRuleBuilderOptions<T, string> IsValidCPFOrCNPJ<T>(this IRuleBuilder<T, string> ruleBuilder)
         {
-            return ruleBuilder.SetValidator(new CpfCnpjValidator());
+            return ruleBuilder.SetValidator(new CpfCnpjValidator<T, string>());
         }
     }
 }

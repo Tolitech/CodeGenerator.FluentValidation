@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31912.275
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tolitech.CodeGenerator.FluentValidation", "FluentValidation\Tolitech.CodeGenerator.FluentValidation.csproj", "{2B650899-72BD-46AB-BF64-CD71CEA5A5E1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tolitech.CodeGenerator.FluentValidation.Tests", "FluentValidation.Tests\Tolitech.CodeGenerator.FluentValidation.Tests.csproj", "{973B48C0-83DA-491D-8DF3-9DCA4D57B3C2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2B650899-72BD-46AB-BF64-CD71CEA5A5E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B650899-72BD-46AB-BF64-CD71CEA5A5E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B650899-72BD-46AB-BF64-CD71CEA5A5E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B650899-72BD-46AB-BF64-CD71CEA5A5E1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{973B48C0-83DA-491D-8DF3-9DCA4D57B3C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{973B48C0-83DA-491D-8DF3-9DCA4D57B3C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{973B48C0-83DA-491D-8DF3-9DCA4D57B3C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{973B48C0-83DA-491D-8DF3-9DCA4D57B3C2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {285FA82E-D0C8-498C-AAB9-62F86330B958}
+	EndGlobalSection
+EndGlobal

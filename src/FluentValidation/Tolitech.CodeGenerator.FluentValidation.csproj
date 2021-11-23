@@ -1,32 +1,35 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net5.0</TargetFramework>
-    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>2.0.0-alpha-1</Version>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Version>1.0.2-alpha-1</Version>
     <Authors>Tolitech</Authors>
-    <Company>Tolitech</Company>
-    <Product>Tolitech Code Generator</Product>
     <Description>FluentValidation library for Tolitech Code Generator.</Description>
-    <PackageProjectUrl>https://www.codegenerator.com.br/</PackageProjectUrl>
-    <PackageIconUrl></PackageIconUrl>
-    <RepositoryUrl>https://github.com/tolitech/FluentValidation</RepositoryUrl>
-    <RepositoryType>github</RepositoryType>
-    <PackageTags>fluent validation</PackageTags>
-    <PackageReleaseNotes>More information at http://www.codegenerator.com.br/</PackageReleaseNotes>
-    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageProjectUrl>https://www.tolitech.com.br</PackageProjectUrl>
     <PackageIcon>icon.png</PackageIcon>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <RepositoryUrl>https://github.com/tolitech/fluentvalidation</RepositoryUrl>
+    <RepositoryType>github</RepositoryType>
+    <PackageTags>fluent-validation</PackageTags>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
   </PropertyGroup>
 
   <ItemGroup>
-    <None Include="..\..\..\icon.png">
+    <None Include="..\..\..\..\icon.png">
       <Pack>True</Pack>
-      <PackagePath></PackagePath>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Include="..\..\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
     </None>
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="FluentValidation" Version="10.3.0" />
+    <PackageReference Include="FluentValidation" Version="10.3.4" />
   </ItemGroup>
 
   <ItemGroup>
@@ -38,13 +41,16 @@
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Update="Resources\CpfCnpj\CpfCnpjResource.en-US.resx">
-      <Generator>PublicResXFileCodeGenerator</Generator>
-    </EmbeddedResource>
     <EmbeddedResource Update="Resources\CpfCnpj\CpfCnpjResource.es-ES.resx">
+      <LastGenOutput>CpfCnpjResource.en-US.Designer.cs</LastGenOutput>
       <Generator>PublicResXFileCodeGenerator</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Resources\CpfCnpj\CpfCnpjResource.pt-BR.resx">
+      <LastGenOutput>CpfCnpjResource.en-US.Designer.cs</LastGenOutput>
+      <Generator>PublicResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Resources\CpfCnpj\CpfCnpjResource.en-US.resx">
+      <LastGenOutput>CpfCnpjResource.en-US.Designer.cs</LastGenOutput>
       <Generator>PublicResXFileCodeGenerator</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Resources\CpfCnpj\CpfCnpjResource.resx">

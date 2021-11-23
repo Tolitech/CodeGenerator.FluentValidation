@@ -121,7 +121,7 @@
     <value>'{PropertyName}' é um CNPJ inválido.</value>
   </data>
   <data name="CpfCnpj_Invalid" xml:space="preserve">
-    <value>'{PropertyName}' é um CPF ou CNPJ inválido.</value>
+    <value>'{PropertyName}' é um CPF inválido.</value>
   </data>
   <data name="Cpf_Invalid" xml:space="preserve">
     <value>'{PropertyName}' é um CPF inválido.</value>
